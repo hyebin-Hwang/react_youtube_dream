@@ -18,7 +18,7 @@ class Youtube {
 
   async search(query) {
     const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&mostResults=25&q=${query}&type=video&key=${this.key}`,
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&type=video&key=${this.key}`,
       this.getRequestOptions
     );
     const result = await response.json();
